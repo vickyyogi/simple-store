@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cart-items{
+            position: fixed; top: 20%; right: 10px; background: white; 
+            border: 1px solid #e2e8f0; border-radius: 8px; width: 300px; 
+            padding: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .cart-items h3{
+            margin-bottom: 1rem;
+        }
+        .cart-items ul{
+            list-style: none;
+        }
+        .cart-items li{
+            display: flex; justify-content: space-between; align-items: center;
+            margin-bottom: 0.5rem;
+        }
+        .remove-btn{
+            background: #e53e3e; color: white; border: none; padding: 0.25rem 0.5rem;
+            border-radius: 4px; cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="cart-items">
+        <h3>Keranjang Belanja</h3>
+        <ul id="cart-list">
+            <li>Produk 1 - Rp 100.000 <button class="remove-btn">Hapus</button></li>
+            <li>Produk 2 - Rp 200.000 <button class="remove-btn">Hapus</button></li>    
+        </ul>
+    </div>
+</body>
+</html>

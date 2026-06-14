@@ -5,25 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    
+    <script type="module" src="app.js"></script>
 </head>
 <body>
     <nav class="navbar">
-    <div class="logo">Simple Store</div>
-    <div class="search-bar">
-        <input type="text" placeholder="Search products...">
-        <button class="btn-search">Search</button>
-    </div>
-    <div class="nav-cart">
-        <a href=#><i class="cart-icon">🛒</i></a>
-        <span class="cart-badge" id="cart-badge">0</span>
-    </div>
-</nav>
+        <div class="logo">Simple Store</div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search products...">
+            <button class="btn-search">Search</button>
+        </div>
+        <div class="nav-cart">
+            <a href=# id="cart-show"><i class="cart-icon">🛒</i></a>
+            <span class="cart-badge" id="cart-badge">0</span>
+        </div>
+        <div class="showcart display-none" id="showcart">
+            <!-- Keranjang belanja akan ditampilkan di sini -->
+        </div>
+    </nav>
     <main>
         <section class="container" id="product-list">
             <!-- Daftar produk akan ditampilkan di sini -->
         </section>
     </main>
-    <script type="module" src="app.js"></script>
+
 </body>
 </html>
