@@ -8,6 +8,11 @@ const cartShow = document.getElementById("cart-show");
 // Menampilkan total produk di dalam array
 renderProducts();
 
+function Cart(id,quantity){
+    this.id = id;
+    this.quantity = quantity;
+}
+
 // Tambahkan event listener untuk semua tombol "Add to Cart"
 productListElement.addEventListener("click", (e) => {
     if (e.target.classList.contains("btn-add")) {
@@ -43,24 +48,38 @@ function renderProducts() {
 function addToCart(id){
     const cartBadge = document.getElementById("cart-badge");
 
-    const indexTarget = daftarProduk.findIndex((el,ind) => { ind === id});
-    carts.push(indexTarget);
-    cartBadge.textContent = carts.length;
+    const indexTarget = daftarProduk.findIndex((el,ind) =>  ind === id);
+    const qty = 1;
+    const chosenProducts = daftarProduk[indexTarget];
+    const itemsInCart = carts.find(item => item.id === chosenProducts.id);
+
+    if(itemsInCart){
+        itemsInCart.quantity += 1;
+    }else{
+        carts.push(new Cart(chosenProducts.id,qty));
+        cartBadge.textContent = carts.length;
+    }
 }
 
 //masih error, belum bisa menampilkan produk yang sudah di add to cart
 function renderCart(){
     cartListElement.innerHTML = "";
-    const cartItems = carts.map((cartId) => {
-        const { namaProduk, harga } = daftarProduk[cartId];
+    const cartList = carts.map(items => {
+        const findProducts = daftarProduk.find(item => item.id === items.id);
+
         return `
-            <li class="cart-item">
-                <span>${namaProduk}</span>
-                <span>${harga.toLocaleString('id-ID', { style: 'currency', currency: 'IDR' }) }</span>
-            </li>
+            <ul class="cart-list">
+                <li class="cart-item">
+                    <p><a href="#">${findProducts.namaProduk}</a></p>
+                    <span>${findProducts.harga.toLocaleString('id-ID', { style: 'currency', currency: 'IDR' })}</span>
+                    <span>Quantity: ${items.quantity}</span>
+                    <button class="btn-remove" data-id="${items.id}">❌</button>
+                </li>
+                <li><button class="btn-payment" data-id="${items.id}">Continue to Payment</button></li>
+            </ul>
         `;
     }).join("");
-    cartListElement.innerHTML = cartItems;
+    cartListElement.innerHTML = cartList;
 }
 
 cartShow.addEventListener("click", (e) => {
