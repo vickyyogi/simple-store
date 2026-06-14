@@ -1,0 +1,51 @@
+:root { --primary: #2563eb; --dark: #1e293b; --bg: #f8fafc; }
+        
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; }
+        body { background-color: var(--bg); color: var(--dark); line-height: 1.6; }
+
+        /* Navbar */
+        nav { 
+            background: white; padding: 1rem 5%; display: flex; 
+            justify-content: space-between; align-items: center;
+            position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        nav a{
+            color: var(--dark); text-decoration: none; transition: 0.3s;
+        }
+        nav a:hover {
+            color: var(--primary);
+        }
+        .logo { font-size: 1.5rem; font-weight: bold; color: var(--primary); }
+        .search-bar input { 
+            padding: 0.5rem 1rem; border: 1px solid #e2e8f0; border-radius: 8px; 
+            width: 300px; transition: 0.3s;
+        }
+        .search-bar input:focus { border-color: var(--primary); outline: none; }
+        .btn-search { 
+            margin-left: 0.5rem; background: var(--primary); color: white; 
+            border: none; padding: 0.5rem 1rem; border-radius: 8px; cursor: pointer; transition: 0.3s;
+        }
+        .cart-container { position: relative; cursor: pointer; font-size: 1.5rem; }
+        .cart-badge { 
+            position: absolute; top: 0; right: 0; background: red; 
+            color: white; font-size: 0.7rem; padding: 2px 6px; border-radius: 50%; 
+        }
+        .nav-cart { position: relative; }
+        .nav-cart a { font-size: 1.5rem; }
+
+
+        /* Grid Produk */
+        .container { padding: 2rem 5%; display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 2rem; }
+        .card { 
+            background: white; padding: 1.5rem; border-radius: 16px; 
+            transition: 0.3s; border: 1px solid #e2e8f0; display: flex; flex-direction: column;
+        }
+        .card:hover { transform: translateY(-8px); box-shadow: 0 12px 24px rgba(0,0,0,0.1); }
+        .card h3 { margin-bottom: 0.5rem; font-size: 1.1rem; }
+        .price { color: var(--primary); font-weight: bold; margin-bottom: 1rem; }
+        .btn-add { 
+            margin-top: auto; background: var(--dark); color: white; 
+            border: none; padding: 0.8rem; border-radius: 8px; cursor: pointer; transition: 0.3s;
+        }
+        .btn-add:hover { background: var(--primary); }
+        .rating { margin-bottom: 1rem; color: #fbbf24; }
