@@ -12,11 +12,13 @@
         .cart-item a{
             font-weight: bold; color: var(--primary); text-decoration: none; transition: 0.3s;
         }
-       .btn-payment{
-            background: var(--primary); color: white; border: none; padding: 0.8rem; border-radius: 8px; cursor: pointer; transition: 0.3s;
+        .cart-item button{
+            background: var(--secondary); color: white; border: none; padding: 0.8rem; border-radius: 8px; cursor: pointer; transition: 0.3s;
+        }
+        .btn-payment{
+            width: 100%; background: var(--primary); color: white; border: none; padding: 0.8rem; border-radius: 8px; cursor: pointer; transition: 0.3s;
         }
         .cart-item:last-child { border-bottom: none; }
-
 
         /* Navbar */
         nav { 
