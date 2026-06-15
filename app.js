@@ -68,12 +68,13 @@ function renderCart(){
     cartListElement.innerHTML = "";
     const cartList = carts.map(items => {
         const findProducts = daftarProduk.find(item => item.id === items.id);
+        const total = findProducts.harga * items.quantity;
 
         return `
             <ul class="cart-list">
                 <li class="cart-item">
                     <p><a href="#">${findProducts.namaProduk}</a></p>
-                    <span>${findProducts.harga.toLocaleString('id-ID', { style: 'currency', currency: 'IDR' })}</span>
+                    <span>${total.toLocaleString('id-ID', { style: 'currency', currency: 'IDR' })}</span>
                     <span>Quantity: ${items.quantity}</span>
                     <button class="btn-remove" data-id="${items.id}">Hapus</button>
                 </li>
