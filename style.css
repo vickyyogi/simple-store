@@ -12,16 +12,8 @@
         .cart-item a{
             font-weight: bold; color: var(--primary); text-decoration: none; transition: 0.3s;
         }
-<<<<<<< HEAD
        .btn-payment{
             background: var(--primary); color: white; border: none; padding: 0.8rem; border-radius: 8px; cursor: pointer; transition: 0.3s;
-=======
-        .cart-item button{
-            background: var(--secondary); color: white; border: none; padding: 0.8rem; border-radius: 8px; cursor: pointer; transition: 0.3s;
-        }
-        .btn-payment{
-            width: 100%; background: var(--primary); color: white; border: none; padding: 0.8rem; border-radius: 8px; cursor: pointer; transition: 0.3s;
->>>>>>> 84ae07216522900649f8a2f23bcffa69d0860f2f
         }
         .cart-item:last-child { border-bottom: none; }
 
@@ -59,11 +51,7 @@
             position: absolute; top: 100%; right: 0; background: white; 
             border: 1px solid #e2e8f0; border-radius: 8px; width: 300px; 
             padding: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-<<<<<<< HEAD
-            overflow-y: auto; max-height: 400px; z-index: 1000;
-=======
             overflow-y:scroll;
->>>>>>> 84ae07216522900649f8a2f23bcffa69d0860f2f
         }
 
 
