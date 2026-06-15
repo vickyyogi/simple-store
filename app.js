@@ -4,9 +4,22 @@ let carts = [];
 const productListElement = document.getElementById("product-list");
 const cartListElement = document.getElementById("showcart");
 const cartShow = document.getElementById("cart-show");
+const searchInput = document.getElementById("search-product");
 
 // Menampilkan total produk di dalam array
-renderProducts();
+window.addEventListener("DOMContentLoaded",()=>{
+    if(searchInput.length < 1){
+        return renderProducts();
+    }
+    searchInput.addEventListener("input", (e) => {
+        const searchTerm = e.target.value.toLowerCase();
+        const filteredProducts = daftarProduk.filter(product =>
+            product.namaProduk.toLowerCase().includes(searchTerm) ||
+            product.kategori.toLowerCase().includes(searchTerm)
+        );
+        renderProducts(filteredProducts);
+    });
+})
 
 function Cart(id,quantity){
     this.id = id;
@@ -21,9 +34,10 @@ productListElement.addEventListener("click", (e) => {
     }
 });
 
-function renderProducts() {
+function renderProducts(productsToRender = daftarProduk) {
+   
     productListElement.innerHTML = ""; // Clear existing products
-    const allProducts = daftarProduk.map((product,index) => {
+    const allProducts = productsToRender.map((product,index) => {
         const {id, namaProduk, kategori, harga, stok, isTersedia,
             varianWarna: [varian1, varian2],
             penilaian: { skor, jumlahUlasan},
