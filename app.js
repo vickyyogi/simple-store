@@ -55,9 +55,11 @@ function addToCart(id){
 
     if(itemsInCart){
         itemsInCart.quantity += 1;
+        renderCart()
     }else{
         carts.push(new Cart(chosenProducts.id,qty));
         cartBadge.textContent = carts.length;
+        renderCart()
     }
 }
 
@@ -73,13 +75,16 @@ function renderCart(){
                     <p><a href="#">${findProducts.namaProduk}</a></p>
                     <span>${findProducts.harga.toLocaleString('id-ID', { style: 'currency', currency: 'IDR' })}</span>
                     <span>Quantity: ${items.quantity}</span>
-                    <button class="btn-remove" data-id="${items.id}">❌</button>
+                    <button class="btn-remove" data-id="${items.id}">Hapus</button>
                 </li>
-                <li><button class="btn-payment" data-id="${items.id}">Continue to Payment</button></li>
             </ul>
         `;
     }).join("");
     cartListElement.innerHTML = cartList;
+    const btnPay = document.createElement("button");
+    btnPay.textContent = "Proccess to Payment";
+    btnPay.classList.add("btn-payment");
+    cartListElement.appendChild(btnPay);
 }
 
 cartShow.addEventListener("click", (e) => {

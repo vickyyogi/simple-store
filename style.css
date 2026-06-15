@@ -1,4 +1,4 @@
-:root { --primary: #2563eb; --dark: #1e293b; --bg: #f8fafc; }
+:root { --primary: #2563eb; --secondary:#c93d57; --dark: #1e293b; --bg: #f8fafc; }
         
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; }
         body { background-color: var(--bg); color: var(--dark); line-height: 1.6; }
@@ -12,8 +12,11 @@
         .cart-item a{
             font-weight: bold; color: var(--primary); text-decoration: none; transition: 0.3s;
         }
-        .cart-list .btn-payment{
-            background: var(--primary); color: white; border: none; padding: 0.8rem; border-radius: 8px; cursor: pointer; transition: 0.3s;
+        .cart-item button{
+            background: var(--secondary); color: white; border: none; padding: 0.8rem; border-radius: 8px; cursor: pointer; transition: 0.3s;
+        }
+        .btn-payment{
+            width: 100%; background: var(--primary); color: white; border: none; padding: 0.8rem; border-radius: 8px; cursor: pointer; transition: 0.3s;
         }
         .cart-item:last-child { border-bottom: none; }
 
