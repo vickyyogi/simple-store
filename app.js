@@ -75,7 +75,6 @@ function renderCart(){
                     <span>Quantity: ${items.quantity}</span>
                     <button class="btn-remove" data-id="${items.id}">❌</button>
                 </li>
-                <li><button class="btn-payment" data-id="${items.id}">Continue to Payment</button></li>
             </ul>
         `;
     }).join("");
