@@ -7,11 +7,13 @@ const cartShow = document.getElementById("cart-show");
 const searchInput = document.getElementById("search-product");
 
 // Menampilkan total produk di dalam array
+renderProducts();
+
 window.addEventListener("DOMContentLoaded",()=>{
     if(searchInput.length < 1){
         return renderProducts();
-    }
-    searchInput.addEventListener("input", (e) => {
+    }else{
+        searchInput.addEventListener("input", (e) => {
         const searchTerm = e.target.value.toLowerCase();
         const filteredProducts = daftarProduk.filter(product =>
             product.namaProduk.toLowerCase().includes(searchTerm) ||
@@ -19,6 +21,8 @@ window.addEventListener("DOMContentLoaded",()=>{
         );
         renderProducts(filteredProducts);
     });
+    }
+    
 })
 
 function Cart(id,quantity){
