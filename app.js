@@ -81,10 +81,10 @@ function addToCart(id){
     }
 }
 
-//masih error, belum bisa menampilkan produk yang sudah di add to cart
+//menampilkan product yang ada di keranjang
 function renderCart(){
     cartListElement.innerHTML = "";
-    const cartList = carts.map(items => {
+    const cartList = carts.map((items,index) => {
         const findProducts = daftarProduk.find(item => item.id === items.id);
         const total = findProducts.harga * items.quantity;
 
@@ -94,7 +94,7 @@ function renderCart(){
                     <p><a href="#">${findProducts.namaProduk}</a></p>
                     <span>${total.toLocaleString('id-ID', { style: 'currency', currency: 'IDR' })}</span>
                     <span>Quantity: ${items.quantity}</span>
-                    <button class="btn-remove" data-id="${items.id}">Hapus</button>
+                    <button class="btn-remove" data-id="${index}">Hapus</button>
                 </li>
             </ul>
         `;
@@ -111,3 +111,17 @@ cartShow.addEventListener("click", (e) => {
     cartListElement.classList.toggle("display-none");
     renderCart();
 });
+
+// Event listener untuk tombol "Hapus" di dalam keranjang
+cartListElement.addEventListener("click", (e) => {
+    if(e.target.classList.contains("btn-remove")){
+        const id = parseInt(e.target.getAttribute("data-id"));
+        const indexInCart = carts.findIndex((item,index) => index === id);
+
+        if(indexInCart !== -1){
+            carts.splice(indexInCart, 1);
+            renderCart();
+        }
+    }
+
+})
