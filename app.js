@@ -25,6 +25,7 @@ window.addEventListener("DOMContentLoaded",()=>{
     
 })
 
+//constructor
 function Cart(id,quantity){
     this.id = id;
     this.quantity = quantity;

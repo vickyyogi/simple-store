@@ -208,6 +208,219 @@ const daftarProduk = JSON.parse(localStorage.getItem("products")) || [
   {
     id: "PRD-050", namaProduk: "Buku Catatan A5 Dotted Notebook", kategori: "Alat Tulis", harga: 40000, stok: 75, isTersedia: true, varianWarna: ["Hitam", "Coklat Kraft"],
     penilaian: { skor: 4.8, jumlahUlasan: 580 }, spesifikasi: { berat: "200 gram", kondisi: "Baru" }
+  },
+  // --- KATEGORI OTOMOTIF ---
+  {
+    id: "PRD-051", namaProduk: "Helm Bogo Retro Kaca Datar", kategori: "Otomotif", harga: 150000, stok: 45, isTersedia: true, varianWarna: ["Hitam Doff", "Kuning", "Cream"],
+    penilaian: { skor: 4.7, jumlahUlasan: 1250 }, spesifikasi: { berat: "1.2 kg", kondisi: "Baru" }
+  },
+  {
+    id: "PRD-052", namaProduk: "Oli Mesin Motul 3100 Gold 1L", kategori: "Otomotif", harga: 65000, stok: 120, isTersedia: true, varianWarna: [],
+    penilaian: { skor: 4.9, jumlahUlasan: 3400 }, spesifikasi: { berat: "1 kg", kondisi: "Baru" }
+  },
+  {
+    id: "PRD-053", namaProduk: "Sarung Tangan Motor Touchscreen", kategori: "Otomotif", harga: 45000, stok: 80, isTersedia: true, varianWarna: ["Hitam", "Abu-abu"],
+    penilaian: { skor: 4.5, jumlahUlasan: 670 }, spesifikasi: { berat: "150 gram", kondisi: "Baru" }
+  },
+  {
+    id: "PRD-054", namaProduk: "Kanebo Serat Microfiber Besar", kategori: "Otomotif", harga: 25000, stok: 200, isTersedia: true, varianWarna: ["Kuning", "Biru"],
+    penilaian: { skor: 4.8, jumlahUlasan: 890 }, spesifikasi: { berat: "100 gram", kondisi: "Baru" }
+  },
+  {
+    id: "PRD-055", namaProduk: "Jas Hujan Setelan Axio Europe", kategori: "Otomotif", harga: 220000, stok: 30, isTersedia: true, varianWarna: ["Hitam", "Navy", "Maroon"],
+    penilaian: { skor: 4.7, jumlahUlasan: 1100 }, spesifikasi: { berat: "1.5 kg", kondisi: "Baru" }
+  },
+
+  // --- KATEGORI KECANTIKAN & PERAWATAN ---
+  {
+    id: "PRD-056", namaProduk: "Sunscreen Wardah UV Shield SPF 50", kategori: "Kecantikan", harga: 55000, stok: 150, isTersedia: true, varianWarna: [],
+    penilaian: { skor: 4.8, jumlahUlasan: 4500 }, spesifikasi: { berat: "50 gram", kondisi: "Baru" }
+  },
+  {
+    id: "PRD-057", namaProduk: "Serum Somethinc 5% Niacinamide", kategori: "Kecantikan", harga: 115000, stok: 0, isTersedia: false, varianWarna: [],
+    penilaian: { skor: 4.9, jumlahUlasan: 8900 }, spesifikasi: { berat: "70 gram", kondisi: "Baru" }
+  },
+  {
+    id: "PRD-058", namaProduk: "Sabun Cuci Muka Cetaphil Gentle 250ml", kategori: "Kecantikan", harga: 150000, stok: 85, isTersedia: true, varianWarna: [],
+    penilaian: { skor: 4.8, jumlahUlasan: 5600 }, spesifikasi: { berat: "300 gram", kondisi: "Baru" }
+  },
+  {
+    id: "PRD-059", namaProduk: "Lip Matte Make Over Powerstay", kategori: "Kecantikan", harga: 95000, stok: 60, isTersedia: true, varianWarna: ["Skye", "B01", "B04"],
+    penilaian: { skor: 4.7, jumlahUlasan: 3200 }, spesifikasi: { berat: "40 gram", kondisi: "Baru" }
+  },
+  {
+    id: "PRD-060", namaProduk: "Parfum HMNS Orgasm 100ml", kategori: "Kecantikan", harga: 320000, stok: 15, isTersedia: true, varianWarna: [],
+    penilaian: { skor: 4.9, jumlahUlasan: 1500 }, spesifikasi: { berat: "250 gram", kondisi: "Baru" }
+  },
+  {
+    id: "PRD-061", namaProduk: "Deodorant Roll On Nivea Extra Whitening", kategori: "Perawatan", harga: 22000, stok: 140, isTersedia: true, varianWarna: [],
+    penilaian: { skor: 4.8, jumlahUlasan: 2100 }, spesifikasi: { berat: "80 gram", kondisi: "Baru" }
+  },
+  {
+    id: "PRD-062", namaProduk: "Shampo Pantene Anti Ketombe 300ml", kategori: "Perawatan", harga: 35000, stok: 200, isTersedia: true, varianWarna: [],
+    penilaian: { skor: 4.7, jumlahUlasan: 1800 }, spesifikasi: { berat: "350 gram", kondisi: "Baru" }
+  },
+  {
+    id: "PRD-063", namaProduk: "Body Lotion Vaseline Healthy White", kategori: "Perawatan", harga: 48000, stok: 90, isTersedia: true, varianWarna: [],
+    penilaian: { skor: 4.8, jumlahUlasan: 4100 }, spesifikasi: { berat: "450 gram", kondisi: "Baru" }
+  },
+  {
+    id: "PRD-064", namaProduk: "Masker Wajah Skintific Mugwort", kategori: "Kecantikan", harga: 85000, stok: 110, isTersedia: true, varianWarna: [],
+    penilaian: { skor: 4.9, jumlahUlasan: 7200 }, spesifikasi: { berat: "100 gram", kondisi: "Baru" }
+  },
+  {
+    id: "PRD-065", namaProduk: "Catokan Rambut Philips Essential Care", kategori: "Perawatan", harga: 350000, stok: 25, isTersedia: true, varianWarna: ["Hitam"],
+    penilaian: { skor: 4.6, jumlahUlasan: 850 }, spesifikasi: { berat: "600 gram", kondisi: "Baru" }
+  },
+
+  // --- KATEGORI ELEKTRONIK & GADGET TAMBAHAN ---
+  {
+    id: "PRD-066", namaProduk: "Smart TV Xiaomi Mi TV 4 43 Inch", kategori: "Elektronik", harga: 3500000, stok: 10, isTersedia: true, varianWarna: ["Hitam"],
+    penilaian: { skor: 4.8, jumlahUlasan: 1450 }, spesifikasi: { berat: "8 kg", kondisi: "Baru" }
+  },
+  {
+    id: "PRD-067", namaProduk: "Kipas Angin Berdiri Miyako", kategori: "Elektronik", harga: 180000, stok: 45, isTersedia: true, varianWarna: ["Hitam", "Putih"],
+    penilaian: { skor: 4.7, jumlahUlasan: 2300 }, spesifikasi: { berat: "3.5 kg", kondisi: "Baru" }
+  },
+  {
+    id: "PRD-068", namaProduk: "AC Daikin Standard 1/2 PK Thailand", kategori: "Elektronik", harga: 4200000, stok: 8, isTersedia: true, varianWarna: ["Putih"],
+    penilaian: { skor: 4.9, jumlahUlasan: 890 }, spesifikasi: { berat: "25 kg", kondisi: "Baru" }
+  },
+  {
+    id: "PRD-069", namaProduk: "Kulkas Sharp 2 Pintu Plasmacluster", kategori: "Elektronik", harga: 3800000, stok: 5, isTersedia: true, varianWarna: ["Silver", "Hitam"],
+    penilaian: { skor: 4.8, jumlahUlasan: 520 }, spesifikasi: { berat: "40 kg", kondisi: "Baru" }
+  },
+  {
+    id: "PRD-070", namaProduk: "Mesin Cuci LG Front Load 8kg", kategori: "Elektronik", harga: 5500000, stok: 0, isTersedia: false, varianWarna: ["Putih"],
+    penilaian: { skor: 4.9, jumlahUlasan: 310 }, spesifikasi: { berat: "60 kg", kondisi: "Baru" }
+  },
+  {
+    id: "PRD-071", namaProduk: "Console Nintendo Switch OLED", kategori: "Elektronik", harga: 4800000, stok: 12, isTersedia: true, varianWarna: ["Neon", "White"],
+    penilaian: { skor: 4.9, jumlahUlasan: 1800 }, spesifikasi: { berat: "1.5 kg", kondisi: "Baru" }
+  },
+  {
+    id: "PRD-072", namaProduk: "Controller PS5 DualSense", kategori: "Elektronik", harga: 1200000, stok: 20, isTersedia: true, varianWarna: ["White", "Midnight Black", "Cosmic Red"],
+    penilaian: { skor: 4.8, jumlahUlasan: 2100 }, spesifikasi: { berat: "400 gram", kondisi: "Baru" }
+  },
+  {
+    id: "PRD-073", namaProduk: "Webcam Logitech C920 Pro HD", kategori: "Elektronik", harga: 1100000, stok: 15, isTersedia: true, varianWarna: ["Hitam"],
+    penilaian: { skor: 4.8, jumlahUlasan: 4300 }, spesifikasi: { berat: "250 gram", kondisi: "Baru" }
+  },
+  {
+    id: "PRD-074", namaProduk: "Microphone Condenser Fifine K669B", kategori: "Elektronik", harga: 650000, stok: 35, isTersedia: true, varianWarna: ["Hitam", "Rose Gold"],
+    penilaian: { skor: 4.7, jumlahUlasan: 1200 }, spesifikasi: { berat: "600 gram", kondisi: "Baru" }
+  },
+  {
+    id: "PRD-075", namaProduk: "Ring Light Vlogger 26cm + Tripod", kategori: "Elektronik", harga: 85000, stok: 80, isTersedia: true, varianWarna: ["Hitam"],
+    penilaian: { skor: 4.5, jumlahUlasan: 3400 }, spesifikasi: { berat: "1 kg", kondisi: "Baru" }
+  },
+
+  // --- KATEGORI ALAT TULIS & KANTOR ---
+  {
+    id: "PRD-076", namaProduk: "Kertas HVS A4 70gsm Sinar Dunia", kategori: "Alat Tulis", harga: 55000, stok: 300, isTersedia: true, varianWarna: ["Putih"],
+    penilaian: { skor: 4.9, jumlahUlasan: 5600 }, spesifikasi: { berat: "2.5 kg", kondisi: "Baru" }
+  },
+  {
+    id: "PRD-077", namaProduk: "Pulpen Kenko Gel Pen 0.5mm (1 Pack)", kategori: "Alat Tulis", harga: 35000, stok: 150, isTersedia: true, varianWarna: ["Hitam", "Biru", "Merah"],
+    penilaian: { skor: 4.8, jumlahUlasan: 2100 }, spesifikasi: { berat: "200 gram", kondisi: "Baru" }
+  },
+  {
+    id: "PRD-078", namaProduk: "Spidol Papan Tulis Snowman Board Marker", kategori: "Alat Tulis", harga: 8500, stok: 500, isTersedia: true, varianWarna: ["Hitam", "Biru", "Merah"],
+    penilaian: { skor: 4.9, jumlahUlasan: 3200 }, spesifikasi: { berat: "50 gram", kondisi: "Baru" }
+  },
+  {
+    id: "PRD-079", namaProduk: "Stapler Joyko HD-10 Sedang", kategori: "Alat Tulis", harga: 15000, stok: 120, isTersedia: true, varianWarna: ["Biru", "Pink", "Hijau"],
+    penilaian: { skor: 4.7, jumlahUlasan: 850 }, spesifikasi: { berat: "150 gram", kondisi: "Baru" }
+  },
+  {
+    id: "PRD-080", namaProduk: "Papan Tulis Whiteboard Magnetik 60x90", kategori: "Alat Tulis", harga: 120000, stok: 20, isTersedia: true, varianWarna: ["Putih"],
+    penilaian: { skor: 4.6, jumlahUlasan: 430 }, spesifikasi: { berat: "3 kg", kondisi: "Baru" }
+  },
+
+  // --- KATEGORI PAKAIAN & TAS TAMBAHAN ---
+  {
+    id: "PRD-081", namaProduk: "Kemeja Flanel Pria Lengan Panjang Kotak", kategori: "Pakaian", harga: 135000, stok: 60, isTersedia: true, varianWarna: ["Merah Hitam", "Biru Hitam", "Abu Hitam"],
+    penilaian: { skor: 4.6, jumlahUlasan: 1800 }, spesifikasi: { berat: "300 gram", kondisi: "Baru" }
+  },
+  {
+    id: "PRD-082", namaProduk: "Celana Kulot Scuba Highwaist Wanita", kategori: "Pakaian", harga: 85000, stok: 110, isTersedia: true, varianWarna: ["Hitam", "Putih", "Mocca"],
+    penilaian: { skor: 4.7, jumlahUlasan: 2500 }, spesifikasi: { berat: "350 gram", kondisi: "Baru" }
+  },
+  {
+    id: "PRD-083", namaProduk: "Hijab Bella Square Poly Cotton", kategori: "Pakaian", harga: 25000, stok: 400, isTersedia: true, varianWarna: ["Hitam", "Navy", "Dusty Pink", "Mocca"],
+    penilaian: { skor: 4.9, jumlahUlasan: 8900 }, spesifikasi: { berat: "100 gram", kondisi: "Baru" }
+  },
+  {
+    id: "PRD-084", namaProduk: "Kaos Kaki Motif Lucu Semata Kaki (Set 3)", kategori: "Pakaian", harga: 35000, stok: 80, isTersedia: true, varianWarna: ["Mix Warna"],
+    penilaian: { skor: 4.8, jumlahUlasan: 1200 }, spesifikasi: { berat: "150 gram", kondisi: "Baru" }
+  },
+  {
+    id: "PRD-085", namaProduk: "Rok Plisket Premium Import", kategori: "Pakaian", harga: 95000, stok: 45, isTersedia: true, varianWarna: ["Hitam", "Maroon", "Army"],
+    penilaian: { skor: 4.7, jumlahUlasan: 3100 }, spesifikasi: { berat: "300 gram", kondisi: "Baru" }
+  },
+  {
+    id: "PRD-086", namaProduk: "Tas Selempang Kanvas Unisex", kategori: "Aksesoris", harga: 75000, stok: 65, isTersedia: true, varianWarna: ["Hitam", "Cream", "Hijau Army"],
+    penilaian: { skor: 4.6, jumlahUlasan: 1500 }, spesifikasi: { berat: "250 gram", kondisi: "Baru" }
+  },
+  {
+    id: "PRD-087", namaProduk: "Tote Bag Canvas Resleting Aesthetic", kategori: "Aksesoris", harga: 45000, stok: 150, isTersedia: true, varianWarna: ["Putih Tulang", "Hitam"],
+    penilaian: { skor: 4.8, jumlahUlasan: 4200 }, spesifikasi: { berat: "200 gram", kondisi: "Baru" }
+  },
+  {
+    id: "PRD-088", namaProduk: "Koper Hardcase Polo Fiber 20 Inch Kabin", kategori: "Aksesoris", harga: 450000, stok: 0, isTersedia: false, varianWarna: ["Silver", "Rose Gold", "Hitam"],
+    penilaian: { skor: 4.7, jumlahUlasan: 890 }, spesifikasi: { berat: "2.5 kg", kondisi: "Baru" }
+  },
+  {
+    id: "PRD-089", namaProduk: "Sabuk Gesper Kulit Asli Pria", kategori: "Aksesoris", harga: 150000, stok: 35, isTersedia: true, varianWarna: ["Hitam", "Coklat Tua"],
+    penilaian: { skor: 4.8, jumlahUlasan: 670 }, spesifikasi: { berat: "250 gram", kondisi: "Baru" }
+  },
+  {
+    id: "PRD-090", namaProduk: "Jam Tangan Wanita Analog Minimalis", kategori: "Aksesoris", harga: 250000, stok: 20, isTersedia: true, varianWarna: ["Rose Gold", "Silver"],
+    penilaian: { skor: 4.5, jumlahUlasan: 340 }, spesifikasi: { berat: "150 gram", kondisi: "Baru" }
+  },
+
+  // --- KATEGORI OLAHRAGA & OUTDOOR ---
+  {
+    id: "PRD-091", namaProduk: "Tenda Camping Dome Double Layer 4 Orang", kategori: "Outdoor", harga: 450000, stok: 15, isTersedia: true, varianWarna: ["Biru", "Orange"],
+    penilaian: { skor: 4.6, jumlahUlasan: 450 }, spesifikasi: { berat: "2.5 kg", kondisi: "Baru" }
+  },
+  {
+    id: "PRD-092", namaProduk: "Sleeping Bag Eiger Polar Tahan Dingin", kategori: "Outdoor", harga: 350000, stok: 25, isTersedia: true, varianWarna: ["Hitam", "Navy"],
+    penilaian: { skor: 4.9, jumlahUlasan: 1200 }, spesifikasi: { berat: "900 gram", kondisi: "Baru" }
+  },
+  {
+    id: "PRD-093", namaProduk: "Dumbbell Barbel Neoprene 5kg (Sepasang)", kategori: "Olahraga", harga: 250000, stok: 10, isTersedia: true, varianWarna: ["Biru", "Merah", "Hitam"],
+    penilaian: { skor: 4.7, jumlahUlasan: 890 }, spesifikasi: { berat: "10 kg", kondisi: "Baru" }
+  },
+  {
+    id: "PRD-094", namaProduk: "Raket Badminton Yonex Astrox", kategori: "Olahraga", harga: 650000, stok: 18, isTersedia: true, varianWarna: ["Merah Hitam", "Kuning Hitam"],
+    penilaian: { skor: 4.8, jumlahUlasan: 1500 }, spesifikasi: { berat: "400 gram", kondisi: "Baru" }
+  },
+  {
+    id: "PRD-095", namaProduk: "Bola Basket Spalding NBA Original", kategori: "Olahraga", harga: 450000, stok: 12, isTersedia: true, varianWarna: ["Orange Coklat"],
+    penilaian: { skor: 4.9, jumlahUlasan: 670 }, spesifikasi: { berat: "650 gram", kondisi: "Baru" }
+  },
+
+  // --- KATEGORI MAKANAN & MINUMAN TAMBAHAN ---
+  {
+    id: "PRD-096", namaProduk: "Mie Instan Indomie Goreng (1 Dus isi 40)", kategori: "Makanan & Minuman", harga: 115000, stok: 150, isTersedia: true, varianWarna: [],
+    penilaian: { skor: 5.0, jumlahUlasan: 12500 }, spesifikasi: { berat: "3.5 kg", kondisi: "Baru" }
+  },
+  {
+    id: "PRD-097", namaProduk: "Susu UHT Ultra Milk Coklat 1000ml", kategori: "Makanan & Minuman", harga: 18000, stok: 200, isTersedia: true, varianWarna: [],
+    penilaian: { skor: 4.9, jumlahUlasan: 8400 }, spesifikasi: { berat: "1 kg", kondisi: "Baru" }
+  },
+  {
+    id: "PRD-098", namaProduk: "Selai Kacang Skippy Chunky 500g", kategori: "Makanan & Minuman", harga: 55000, stok: 45, isTersedia: true, varianWarna: [],
+    penilaian: { skor: 4.8, jumlahUlasan: 2100 }, spesifikasi: { berat: "600 gram", kondisi: "Baru" }
+  },
+  {
+    id: "PRD-099", namaProduk: "Keripik Singkong Kusuka Balado 180g", kategori: "Makanan & Minuman", harga: 15000, stok: 100, isTersedia: true, varianWarna: [],
+    penilaian: { skor: 4.7, jumlahUlasan: 1500 }, spesifikasi: { berat: "200 gram", kondisi: "Baru" }
+  },
+  {
+    id: "PRD-100", namaProduk: "Minyak Goreng Bimoli Pouch 2 Liter", kategori: "Makanan & Minuman", harga: 38000, stok: 300, isTersedia: true, varianWarna: [],
+    penilaian: { skor: 4.9, jumlahUlasan: 15600 }, spesifikasi: { berat: "2 kg", kondisi: "Baru" }
   }
 ];
 
