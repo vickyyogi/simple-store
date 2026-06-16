@@ -127,6 +127,87 @@ const daftarProduk = JSON.parse(localStorage.getItem("products")) || [
   {
     id: "PRD-030", namaProduk: "Matras Yoga NBR 10mm", kategori: "Olahraga", harga: 120000, stok: 35, isTersedia: true, varianWarna: ["Ungu", "Pink", "Biru"],
     penilaian: { skor: 4.8, jumlahUlasan: 670 }, spesifikasi: { berat: "800 gram", kondisi: "Baru" }
+  },
+  //KATEGORI CAMPUR ---- PRODUK -----
+  {
+    id: "PRD-031", namaProduk: "Botol Minum Tumbler Stainless", kategori: "Peralatan Rumah", harga: 75000, stok: 55, isTersedia: true, varianWarna: ["Hitam", "Silver", "Putih"],
+    penilaian: { skor: 4.8, jumlahUlasan: 610 }, spesifikasi: { berat: "250 gram", kondisi: "Baru" }
+  },
+  {
+    id: "PRD-032", namaProduk: "Lampu Meja Belajar LED", kategori: "Elektronik", harga: 125000, stok: 20, isTersedia: true, varianWarna: ["Putih"],
+    penilaian: { skor: 4.7, jumlahUlasan: 280 }, spesifikasi: { berat: "300 gram", kondisi: "Baru" }
+  },
+  {
+    id: "PRD-033", namaProduk: "Rak Buku Kayu Susun 3", kategori: "Perabotan", harga: 185000, stok: 15, isTersedia: true, varianWarna: ["Coklat Kayu"],
+    penilaian: { skor: 4.5, jumlahUlasan: 145 }, spesifikasi: { berat: "4500 gram", kondisi: "Baru" }
+  },
+  {
+    id: "PRD-034", namaProduk: "Speaker Bluetooth Mini Portable", kategori: "Elektronik", harga: 150000, stok: 35, isTersedia: true, varianWarna: ["Hitam", "Merah"],
+    penilaian: { skor: 4.6, jumlahUlasan: 420 }, spesifikasi: { berat: "200 gram", kondisi: "Baru" }
+  },
+  {
+    id: "PRD-035", namaProduk: "Powerbank Fast Charging 10000mAh", kategori: "Aksesoris Handphone", harga: 199000, stok: 28, isTersedia: true, varianWarna: ["Hitam", "Putih"],
+    penilaian: { skor: 4.8, jumlahUlasan: 850 }, spesifikasi: { berat: "250 gram", kondisi: "Baru" }
+  },
+  {
+    id: "PRD-036", namaProduk: "Kabel Data Type-C Braided", kategori: "Aksesoris Handphone", harga: 45000, stok: 120, isTersedia: true, varianWarna: ["Hitam", "Merah"],
+    penilaian: { skor: 4.9, jumlahUlasan: 1100 }, spesifikasi: { berat: "50 gram", kondisi: "Baru" }
+  },
+  {
+    id: "PRD-037", namaProduk: "Charger Adaptor 20W PD", kategori: "Aksesoris Handphone", harga: 135000, stok: 40, isTersedia: true, varianWarna: ["Putih"],
+    penilaian: { skor: 4.8, jumlahUlasan: 630 }, spesifikasi: { berat: "80 gram", kondisi: "Baru" }
+  },
+  {
+    id: "PRD-038", namaProduk: "Earphone TWS Low Latency", kategori: "Elektronik", harga: 225000, stok: 18, isTersedia: true, varianWarna: ["Hitam", "Putih"],
+    penilaian: { skor: 4.7, jumlahUlasan: 390 }, spesifikasi: { berat: "100 gram", kondisi: "Baru" }
+  },
+  {
+    id: "PRD-039", namaProduk: "Smartwatch Fitness Tracker", kategori: "Elektronik", harga: 350000, stok: 12, isTersedia: true, varianWarna: ["Hitam", "Pink"],
+    penilaian: { skor: 4.5, jumlahUlasan: 215 }, spesifikasi: { berat: "120 gram", kondisi: "Baru" }
+  },
+  {
+    id: "PRD-040", namaProduk: "Holder HP Meja Lipat", kategori: "Aksesoris Handphone", harga: 25000, stok: 80, isTersedia: true, varianWarna: ["Hitam", "Putih", "Hijau"],
+    penilaian: { skor: 4.8, jumlahUlasan: 920 }, spesifikasi: { berat: "150 gram", kondisi: "Baru" }
+  },
+  {
+    id: "PRD-041", namaProduk: "Buku Panduan Database SQL & NoSQL", kategori: "Buku", harga: 115000, stok: 10, isTersedia: true, varianWarna: ["Biru"],
+    penilaian: { skor: 4.8, jumlahUlasan: 76 }, spesifikasi: { berat: "350 gram", kondisi: "Baru" }
+  },
+  {
+    id: "PRD-042", namaProduk: "Flashdisk USB 3.0 64GB", kategori: "Aksesoris Komputer", harga: 85000, stok: 50, isTersedia: true, varianWarna: ["Silver"],
+    penilaian: { skor: 4.9, jumlahUlasan: 430 }, spesifikasi: { berat: "20 gram", kondisi: "Baru" }
+  },
+  {
+    id: "PRD-043", namaProduk: "Jaket Windbreaker Anti Air", kategori: "Pakaian", harga: 175000, stok: 22, isTersedia: true, varianWarna: ["Hitam", "Navy", "Hijau Army"],
+    penilaian: { skor: 4.6, jumlahUlasan: 180 }, spesifikasi: { berat: "300 gram", kondisi: "Baru" }
+  },
+  {
+    id: "PRD-044", namaProduk: "Sarung Tangan Motor Touchscreen", kategori: "Aksesoris Motor", harga: 45000, stok: 60, isTersedia: true, varianWarna: ["Hitam"],
+    penilaian: { skor: 4.7, jumlahUlasan: 320 }, spesifikasi: { berat: "80 gram", kondisi: "Baru" }
+  },
+  {
+    id: "PRD-045", namaProduk: "Jas Hujan Ponco Kelelawar", kategori: "Aksesoris Motor", harga: 95000, stok: 0, isTersedia: false, varianWarna: ["Biru", "Hitam"],
+    penilaian: { skor: 4.8, jumlahUlasan: 510 }, spesifikasi: { berat: "700 gram", kondisi: "Baru" }
+  },
+  {
+    id: "PRD-046", namaProduk: "Kipas Angin Portable USB", kategori: "Elektronik", harga: 65000, stok: 45, isTersedia: true, varianWarna: ["Putih", "Pink", "Biru"],
+    penilaian: { skor: 4.5, jumlahUlasan: 260 }, spesifikasi: { berat: "200 gram", kondisi: "Baru" }
+  },
+  {
+    id: "PRD-047", namaProduk: "Humidifier Diffuser Aromaterapi", kategori: "Peralatan Rumah", harga: 110000, stok: 30, isTersedia: true, varianWarna: ["Kayu Terang", "Kayu Gelap"],
+    penilaian: { skor: 4.7, jumlahUlasan: 480 }, spesifikasi: { berat: "350 gram", kondisi: "Baru" }
+  },
+  {
+    id: "PRD-048", namaProduk: "Essential Oil Peppermint 10ml", kategori: "Kesehatan", harga: 45000, stok: 25, isTersedia: true, varianWarna: ["Kuning Bening"],
+    penilaian: { skor: 4.8, jumlahUlasan: 310 }, spesifikasi: { berat: "50 gram", kondisi: "Baru" }
+  },
+  {
+    id: "PRD-049", namaProduk: "Cangkir Kopi Keramik Estetik", kategori: "Peralatan Dapur", harga: 55000, stok: 16, isTersedia: true, varianWarna: ["Putih Tulang", "Hitam Doff"],
+    penilaian: { skor: 4.9, jumlahUlasan: 145 }, spesifikasi: { berat: "250 gram", kondisi: "Baru" }
+  },
+  {
+    id: "PRD-050", namaProduk: "Buku Catatan A5 Dotted Notebook", kategori: "Alat Tulis", harga: 40000, stok: 75, isTersedia: true, varianWarna: ["Hitam", "Coklat Kraft"],
+    penilaian: { skor: 4.8, jumlahUlasan: 580 }, spesifikasi: { berat: "200 gram", kondisi: "Baru" }
   }
 ];
 

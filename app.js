@@ -30,18 +30,12 @@ function Cart(id,quantity){
     this.quantity = quantity;
 }
 
-// Tambahkan event listener untuk semua tombol "Add to Cart"
-productListElement.addEventListener("click", (e) => {
-    if (e.target.classList.contains("btn-add")) {
-        const id = parseInt(e.target.getAttribute("data-id"));
-        addToCart(id);
-    }
-});
-
 function renderProducts(productsToRender = daftarProduk) {
    
     productListElement.innerHTML = ""; // Clear existing products
-    const allProducts = productsToRender.map((product,index) => {
+    const allProducts = productsToRender.map(product => {
+        
+        //destructuring 
         const {id, namaProduk, kategori, harga, stok, isTersedia,
             varianWarna: [varian1, varian2],
             penilaian: { skor, jumlahUlasan},
@@ -54,7 +48,7 @@ function renderProducts(productsToRender = daftarProduk) {
                 <p class="price">Price: ${harga.toLocaleString('id-ID', { style: 'currency', currency: 'IDR' }) }</p>
                 <small>Kategori : ${kategori}</small>
                 <span class="rating">⭐${skor} , ${jumlahUlasan} ulasan</span>
-                <button class="btn-add" data-id="${index}">🛒 Add to Cart</button>
+                <button class="btn-add" data-id="${id}">🛒 Add to Cart ${id}</button>
             </div>
 
         `;
@@ -63,28 +57,36 @@ function renderProducts(productsToRender = daftarProduk) {
     productListElement.innerHTML = allProducts;
 }
 
+// Tambahkan event listener untuk semua tombol "Add to Cart"
+productListElement.addEventListener("click", (e) => {
+    if (e.target.classList.contains("btn-add")) {
+        const id = e.target.getAttribute("data-id");
+        addToCart(id);
+    }
+});
+
 function addToCart(id){
     const cartBadge = document.getElementById("cart-badge");
 
-    const indexTarget = daftarProduk.findIndex((el,ind) =>  ind === id);
+    const targetID = daftarProduk.find(item =>  item.id === id);
     const qty = 1;
-    const chosenProducts = daftarProduk[indexTarget];
-    const itemsInCart = carts.find(item => item.id === chosenProducts.id);
+    const itemsInCart = carts.find(item => item.id === targetID.id);
 
     if(itemsInCart){
         itemsInCart.quantity += 1;
-        renderCart()
+        renderCart();
     }else{
-        carts.push(new Cart(chosenProducts.id,qty));
+        carts.push(new Cart( targetID.id, qty ));
         cartBadge.textContent = carts.length;
-        renderCart()
+        renderCart();
     }
 }
+
 
 //menampilkan product yang ada di keranjang
 function renderCart(){
     cartListElement.innerHTML = "";
-    const cartList = carts.map((items,index) => {
+    const cartList = carts.map(items => {
         const findProducts = daftarProduk.find(item => item.id === items.id);
         const total = findProducts.harga * items.quantity;
 
@@ -94,7 +96,7 @@ function renderCart(){
                     <p><a href="#">${findProducts.namaProduk}</a></p>
                     <span>${total.toLocaleString('id-ID', { style: 'currency', currency: 'IDR' })}</span>
                     <span>Quantity: ${items.quantity}</span>
-                    <button class="btn-remove" data-id="${index}">Hapus</button>
+                    <button class="btn-remove" data-id="${items.id}">Hapus</button>
                 </li>
             </ul>
         `;
@@ -116,9 +118,9 @@ cartShow.addEventListener("click", (e) => {
 cartListElement.addEventListener("click", (e) => {
     if(e.target.classList.contains("btn-remove")){
         const id = parseInt(e.target.getAttribute("data-id"));
-        const indexInCart = carts.findIndex((item,index) => index === id);
+        const indexInCart = carts.find(item => item.id === id);
 
-        if(indexInCart !== -1){
+        if(!indexInCart){
             carts.splice(indexInCart, 1);
             renderCart();
         }
