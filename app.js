@@ -156,6 +156,29 @@ filterProducts.addEventListener("change",(e)=>{
     if(filterTerm === "All"){
         renderProducts();
     } else {
+        console.log(findFilter)
         renderProducts(findFilter);
     }
 });
+
+sortProducts.addEventListener("change",(e)=>{
+    const sortRange = e.target.value;
+    console.log(sortRange)
+    switch (sortRange) {
+        case "price-low-high":
+                const sorta = daftarProduk.sort((a,b) => a.harga - b.harga);
+                renderProducts(sorta);
+            break;
+        case "price-high-low":
+                const sortb = daftarProduk.sort((a,b) => b.harga - a.harga);
+                renderProducts(sortb);
+            break;
+        case "rating":
+                const sortRating = daftarProduk.sort((a,b) => b.penilaian.skor - a.penilaian.skor);
+                renderProducts(sortRating)
+            break;
+    
+        default:
+            renderCart();
+    }
+})
