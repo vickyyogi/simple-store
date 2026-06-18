@@ -5,13 +5,16 @@ const productListElement = document.getElementById("product-list");
 const cartListElement = document.getElementById("showcart");
 const cartShow = document.getElementById("cart-show");
 const searchInput = document.getElementById("search-product");
+const filterProducts = document.getElementById("filter-category");
+const sortProducts = document.getElementById("sort-products");
 
 // Menampilkan total produk di dalam array
 renderProducts();
 
 window.addEventListener("DOMContentLoaded",()=>{
     if(searchInput.length < 1){
-        return renderProducts();
+        renderProducts();
+        setFilter();
     }else{
         searchInput.addEventListener("input", (e) => {
         const searchTerm = e.target.value.toLowerCase();
@@ -49,7 +52,7 @@ function renderProducts(productsToRender = daftarProduk) {
                 <p class="price">Price: ${harga.toLocaleString('id-ID', { style: 'currency', currency: 'IDR' }) }</p>
                 <small>Kategori : ${kategori}</small>
                 <span class="rating">⭐${skor} , ${jumlahUlasan} ulasan</span>
-                <button class="btn-add" data-id="${id}">🛒 Add to Cart ${id}</button>
+                <button class="btn-add" data-id="${id}">🛒 Add to Cart</button>
             </div>
 
         `;
@@ -127,4 +130,32 @@ cartListElement.addEventListener("click", (e) => {
         }
     }
 
-})
+});
+
+//membuat array kategori untuk filter
+const categories = [...new Set(daftarProduk.map(product => product.kategori))];
+categories.unshift("All"); // Menambahkan opsi "All" di awal array
+
+//menampilkan filter untuk kategori
+const setFilter = () => {
+    filterProducts.innerHTML = "";
+
+    const listCategories = categories.map(list => {
+        return `
+                <option value="${list}">${list}</option>
+        `;
+    }).join("");
+    filterProducts.innerHTML = listCategories
+}
+
+setFilter();
+
+filterProducts.addEventListener("change",(e)=>{
+    const filterTerm= e.target.value;
+    const findFilter = daftarProduk.filter(product => product.kategori === filterTerm);
+    if(filterTerm === "All"){
+        renderProducts();
+    } else {
+        renderProducts(findFilter);
+    }
+});
