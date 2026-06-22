@@ -22,6 +22,9 @@
             width: 100%; background: var(--primary); color: white; border: none; padding: 0.8rem; border-radius: 8px; cursor: pointer; transition: 0.3s;
         }
         .cart-item:last-child { border-bottom: none; }
+        .input-quantity{
+            width: 60px; padding: 0.5rem; border: 1px solid #e2e8f0; border-radius: 8px; margin-top: 0.5rem;
+        }
 
         /* Navbar */
         nav { 

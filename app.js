@@ -88,30 +88,51 @@ function addToCart(id){
 
 
 //menampilkan product yang ada di keranjang
-function renderCart(){
+function renderCart() {
     cartListElement.innerHTML = "";
-    const cartList = carts.map(items => {
+    
+    // Buat wadah utama
+    const ul = document.createElement("ul");
+    ul.className = "cart-list";
+
+    carts.forEach(items => {
         const findProducts = daftarProduk.find(item => item.id === items.id);
         const total = findProducts.harga * items.quantity;
 
-        return `
-            <ul class="cart-list">
-                <li class="cart-item">
-                    <p><a href="#">${findProducts.namaProduk}</a></p>
-                    <span>${total.toLocaleString('id-ID', { style: 'currency', currency: 'IDR' })}</span>
-                    <span>Quantity: ${items.quantity}</span>
-                    <button class="btn-remove" data-id="${items.id}">Hapus</button>
-                </li>
-            </ul>
+        const li = document.createElement("li");
+        li.className = "cart-item";
+        li.innerHTML = `
+            <p>${findProducts.namaProduk}</p>
+            <span>${total.toLocaleString('id-ID', { style: 'currency', currency: 'IDR' })}</span>
+            <input type="number" min="1" value="${items.quantity}" data-id="${items.id}" class="input-quantity">
+            <button class="btn-remove" data-id="${items.id}">Hapus</button>
         `;
-    }).join("");
-    cartListElement.innerHTML = cartList;
+        ul.appendChild(li);
+    });
+
+    cartListElement.appendChild(ul);
+    
+    // Tambahkan tombol payment
     const btnPay = document.createElement("button");
     btnPay.textContent = "Proccess to Payment";
     btnPay.classList.add("btn-payment");
     cartListElement.appendChild(btnPay);
 }
 
+//event listener untuk quantity
+cartListElement.addEventListener("change",(e)=>{
+    if(e.target.classList.contains("input-quantity")){
+        const id = e.target.getAttribute("data-id");
+        const newQuantity = parseInt(e.target.value)
+        const findProducts = carts.find(item => item.id === id);
+        if(findProducts){
+            findProducts.quantity = newQuantity;
+            renderCart();
+        }
+    }
+})
+
+//togle keranjang
 cartShow.addEventListener("click", (e) => {
     e.preventDefault();
     cartListElement.classList.toggle("display-none");
@@ -120,12 +141,14 @@ cartShow.addEventListener("click", (e) => {
 
 // Event listener untuk tombol "Hapus" di dalam keranjang
 cartListElement.addEventListener("click", (e) => {
+    const cartBadge = document.getElementById("cart-badge");
     if(e.target.classList.contains("btn-remove")){
         const id = parseInt(e.target.getAttribute("data-id"));
         const indexInCart = carts.find(item => item.id === id);
 
         if(!indexInCart){
             carts.splice(indexInCart, 1);
+            cartBadge.textContent = carts.length;
             renderCart();
         }
     }
